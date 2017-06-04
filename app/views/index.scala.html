@@ -1,0 +1,40 @@
+@(persons: List [Person],currentFilter: String)
+
+@import helper._
+
+@main("PhoneBook") {
+
+    <h2>PhoneBook 0.1</h2>
+
+    <div>
+        @form(action=routes.Application.listPersons()) {
+        <div>
+            <input type="search" class="form-control" id="search-box" name="filter"
+                   autocomplete="off" value="@currentFilter" placeholder="enter name">
+            <input type="submit" value="Filter" >
+        </div>
+
+
+        }
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone number</th>
+                </tr>
+            </thead>
+                <tbody>
+                    @persons.map { person =>
+                    <tr>
+                        <td>@person.name</td>
+                        <td>@person.pnumber</td>
+                    </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+
