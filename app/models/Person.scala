@@ -29,19 +29,5 @@ object Person {
   def addNewPeerson (name: String,pnumber: String): Unit ={
     availableArtist:+ Person(name,pnumber)
   }
-//  def fetchByCountry(country: String): Seq[Artist] = {
-//    availableArtist.filter(a => a.country == country)
-//  }
 
-//  def fetchByNameOrCountry(name: String, country: String):
-//  Seq[Artist] = {
-//    availableArtist.filter(a => a.name.contains(name) || a.country
-//      == country)
-//  }
-
-//  def fetchByNameAndCountry(name: String, country: String):
-//  Seq[Artist] = {
-//    availableArtist.filter(a => a.name.contains(name) && a.country
-//      == country)
-//  }
-}git config --global user.email
+}
